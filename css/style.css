@@ -1,0 +1,391 @@
+html, body {
+	width: 100%;
+	height: 100vh;    
+    background-color: black;
+}
+.wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 58vh;
+}
+.container{
+    width: 100%;
+    height:  500px;
+    position: relative;
+    margin-left: 30px;    
+    background-color: black;
+}
+
+.container .row-1, .container .row-2{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.container .row-2{
+    margin-left: 42px;
+    position: relative;
+    bottom:-441px;
+    width: 100%;
+}
+.container .row-3{
+    height: 100%;
+    position: absolute;
+    bottom:0px;
+}
+.container .line{
+    position: absolute;
+    left: 28px;
+    width: 2px;
+    height: 449px;
+    top: 23px;
+    transform: rotate(-8.3deg);
+    background: #4B54A6;
+    background: -webkit-radial-gradient(circle farthest-side at center center, #4B54A6 3%, #000000 100%);
+    background: -moz-radial-gradient(circle farthest-side at center center, #4B54A6 3%, #000000 100%);
+    background: radial-gradient(circle farthest-side at center center, #4B54A6 3%, #000000 100%);
+}
+.container .row-3 .line{
+    animation-name: anim-line;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+.container .row-3 .line:nth-child(1), .container .row-4 .line:nth-child(1){    
+    animation-delay: 0.1s;
+    left: 49px;
+}
+.container .row-3 .line:nth-child(2), .container .row-4 .line:nth-child(2){    
+    animation-delay: 0.25s;
+    left: 174px;
+}
+.container .row-3 .line:nth-child(3), .container .row-4 .line:nth-child(3){    
+    animation-delay: 0.4s;
+    left: 299px;
+}
+.container .row-3 .line:nth-child(4), .container .row-4 .line:nth-child(4){    
+    animation-delay: 0.55s;
+    left: 424px;
+}
+.container .row-3 .line:nth-child(5), .container .row-4 .line:nth-child(5){    
+    animation-delay: 0.7s;
+    left: 549px;
+}
+.container .row-3 .line:nth-child(6), .container .row-4 .line:nth-child(6){    
+    animation-delay: 0.85s;
+    left: 674px;
+}
+.container .row-3 .line:nth-child(7), .container .row-4 .line:nth-child(7){    
+    animation-delay: 1s;
+    left: 799px;
+}
+.container .row-3 .line:nth-child(8), .container .row-4 .line:nth-child(8){    
+    animation-delay: 1.15s;
+    left: 924px;
+}
+.container .row-3 .line:nth-child(9), .container .row-4 .line:nth-child(9){    
+    animation-delay: 1.3s;
+    left: 1049px;
+}
+.container .row-3 .line:nth-child(10), .container .row-4 .line:nth-child(10){    
+    animation-delay: 1.45s;
+    left: 1174px;
+}
+.container .row-3 .line:nth-child(11), .container .row-4 .line:nth-child(11){    
+    animation-delay: 1.6s;
+    left: 1299px;
+} 
+/* @for $i from 1 through 30 {
+    .row-2 .circle:nth-child(1), .row-1 .circle:nth-child(#{$i}){
+        animation-delay: 0.1s * $i;
+    }
+} */
+
+.container .row-2 .circle {
+    position: absolute;
+}
+.container .row-2 .circle:nth-child(1), .container .row-1 .circle:nth-child(1){
+    animation-delay: 0.1s;
+}
+.container .row-2 .circle:nth-child(2), .container .row-1 .circle:nth-child(2){
+    animation-delay: 0.25s;
+    left: 125px;
+}
+.container .row-2 .circle:nth-child(3), .container .row-1 .circle:nth-child(3){
+    animation-delay: 0.40s;
+    left: 250px;
+}
+.container .row-2 .circle:nth-child(4), .container .row-1 .circle:nth-child(4){
+    animation-delay: 0.55s;
+    left: 375px;
+}
+.container .row-2 .circle:nth-child(5), .container .row-1 .circle:nth-child(5){
+    animation-delay: 0.70s;
+    left: 500px;
+}
+.container .row-2 .circle:nth-child(6), .container .row-1 .circle:nth-child(6){
+    animation-delay:0.85s;
+    left: 625px;
+}
+.container .row-2 .circle:nth-child(7), .container .row-1 .circle:nth-child(7){
+    animation-delay: 1s;
+    left: 750px;
+}
+.container .row-2 .circle:nth-child(8), .container .row-1 .circle:nth-child(8){
+    animation-delay:1.15s;
+    left: 875px;
+}
+.container .row-2 .circle:nth-child(9), .container .row-1 .circle:nth-child(9){
+    animation-delay: 1.3s;
+    left: 1000px;
+}
+.container .row-2 .circle:nth-child(10), .container .row-1 .circle:nth-child(10){
+    animation-delay: 1.45s;
+    left: 1125px;
+}
+.container .row-2 .circle:nth-child(11), .container .row-1 .circle:nth-child(11){
+    animation-delay: 1.6s;
+    left: 1250px;
+}
+.container .circle{
+    position: absolute;
+    z-index: 4;		
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    -webkit-box-shadow: 2px -5px 86px 5px rgba(255,255,255,1);
+    -moz-box-shadow: 2px -5px 86px 5px rgba(255,255,255,1);
+    box-shadow: 2px -5px 86px 5px rgba(255,255,255,1);
+    
+}
+.container .row-1 .circle {
+    top: 0;
+    width: 30px;
+    height: 30px;    
+    animation-name: anim-circle-first;
+    background: #CECECE;
+    background: -moz-linear-gradient(45deg, #CECECE 0%, #2C2FA3 37%, #1D0933 100%);
+    background: -webkit-linear-gradient(45deg, #CECECE 0%, #2C2FA3 37%, #1D0933 100%);
+    background: linear-gradient(45deg, #CECECE 0%, #2C2FA3 37%, #1D0933 100%);
+    
+}
+.container .row-2 .circle{
+    width: 57px;
+    height: 57px;
+    margin-left: 10px;
+    animation-name: anim-circle-second;      
+    background: #CECECE;
+    background: -moz-linear-gradient(45deg, #CECECE 0%, #731426 63%, #1D0933 100%);
+    background: -webkit-linear-gradient(45deg, #CECECE 0%, #731426 63%, #1D0933 100%);
+    background: linear-gradient(45deg, #CECECE 0%, #731426 63%, #1D0933 100%);
+}
+@keyframes anim-circle-second {
+    50%{
+        transform: translateY(-447px) scale(0.4);
+    }
+}
+@keyframes anim-circle-first {
+    50%{
+        transform: translateY(458px) scale(2);
+    }
+}
+@keyframes anim-line {
+    50%{
+        transform: rotateY(90deg) rotateX(90deg) scale(0);        
+    }    
+}
+
+.row-4 {
+    position: absolute;
+    top:0px;
+}
+
+.row-4 .line{
+}
+
+.row-4 .line{
+    animation-name: anim-line-2;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    transform: rotateY(90deg) rotateX(90deg) scale(0); 
+}
+
+@keyframes anim-line-2 {
+    50%{        
+        transform: scale(0.5) rotate(8deg); 
+    }    
+} 
+
+
+
+.wrap-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+.container-2{
+    width: 100%;
+    height:  500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-2 .row-1, .container-2 .row-2{
+    display: flex;
+}
+.container-2 .row-3{
+    height: 100%;
+    position: absolute;
+    display: flex;
+}
+.container-2 .line{
+    background-color: black;
+    position: absolute;
+    width: 2px;
+    height: 449px;
+    top: 23px;
+    background: #4B54A6;
+    background: -webkit-radial-gradient(circle farthest-side at center center, #4B54A6 3%, #000000 100%);
+    background: -moz-radial-gradient(circle farthest-side at center center, #4B54A6 3%, #000000 100%);
+    background: radial-gradient(circle farthest-side at center center, #4B54A6 3%, #000000 100%);
+}
+.container-2 .row-3 .line{
+    margin: 0 46px;
+    animation-name: anim-line-3;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+.container-2 .row-3 .line:nth-child(1){    
+    animation-delay: 0.1s;
+}
+.container-2 .row-3 .line:nth-child(2){    
+    animation-delay: 0.25s;
+    left: 91px;
+}
+.container-2 .row-3 .line:nth-child(3){    
+    animation-delay: 0.4s;
+    left: 186px;
+}
+.container-2 .row-3 .line:nth-child(4){    
+    animation-delay: 0.55s;
+    left: 277px;
+}
+.container-2 .row-3 .line:nth-child(5){    
+    animation-delay: 0.7s;
+    left: 372px;
+}
+.container-2 .row-3 .line:nth-child(6){    
+    animation-delay: 0.85s;
+    left: 463px;
+}
+.container-2 .row-3 .line:nth-child(7){    
+    animation-delay: 1s;
+    left: 553px;
+}
+.container-2 .row-3 .line:nth-child(8){    
+    animation-delay: 1.15s;
+    left: 649px;
+}
+.container-2 .row-3 .line:nth-child(9){    
+    animation-delay: 1.3s;
+    left: 742px;
+}
+.container-2 .row-3 .line:nth-child(10){    
+    animation-delay: 1.45s;
+    left: 835px;
+}
+.container-2 .row-3 .line:nth-child(11){    
+    animation-delay: 1.6s;
+    left: 926px;
+}
+.container-2 .row-2 .circle:nth-child(1), .container-2 .row-1 .circle:nth-child(1){
+    animation-delay: 0.1s;
+}
+.container-2 .row-2 .circle:nth-child(2), .container-2 .row-1 .circle:nth-child(2){
+    animation-delay: 0.25s;
+}
+.container-2 .row-2 .circle:nth-child(3), .container-2 .row-1 .circle:nth-child(3){
+    animation-delay: 0.40s;
+}
+.container-2 .row-2 .circle:nth-child(4), .container-2 .row-1 .circle:nth-child(4){
+    animation-delay: 0.55s;
+}
+.container-2 .row-2 .circle:nth-child(5), .container-2 .row-1 .circle:nth-child(5){
+    animation-delay: 0.70s;
+}
+.container-2 .row-2 .circle:nth-child(6), .container-2 .row-1 .circle:nth-child(6){
+    animation-delay:0.85s;
+}
+.container-2 .row-2 .circle:nth-child(7), .container-2 .row-1 .circle:nth-child(7){
+    animation-delay: 1s;
+}
+.container-2 .row-2 .circle:nth-child(8), .container-2 .row-1 .circle:nth-child(8){
+    animation-delay:1.15s;
+}
+.container-2 .row-2 .circle:nth-child(9), .container-2 .row-1 .circle:nth-child(9){
+    animation-delay: 1.3s;
+}
+.container-2 .row-2 .circle:nth-child(10), .container-2 .row-1 .circle:nth-child(10){
+    animation-delay: 1.45s;
+}
+.container-2 .row-2 .circle:nth-child(11), .container-2 .row-1 .circle:nth-child(11){
+    animation-delay: 1.6s;
+}
+.container-2 .circle{
+    position: relative;
+    z-index: 4;		
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    -webkit-box-shadow: 2px -5px 86px 5px rgba(255,255,255,1);
+    -moz-box-shadow: 2px -5px 86px 5px rgba(255,255,255,1);
+    box-shadow: 2px -5px 86px 5px rgba(255,255,255,1);    
+}
+.container-2 .row-1 .circle {    
+    width: 28px;
+    height: 28px;
+    margin: 0 32.2px;
+    animation-name: anim-circle-first-2;    
+    background: #CECECE;
+    background: -moz-linear-gradient(45deg, #CECECE 0%, #2C2FA3 37%, #1D0933 100%);
+    background: -webkit-linear-gradient(45deg, #CECECE 0%, #2C2FA3 37%, #1D0933 100%);
+    background: linear-gradient(45deg, #CECECE 0%, #2C2FA3 37%, #1D0933 100%);
+    
+}
+.container-2 .row-2 .circle{    
+    width: 57px;
+    height: 57px;
+    margin: 0 18px;
+    animation-name: anim-circle-second-2;      
+    background: #CECECE;
+    background: -moz-linear-gradient(45deg, #CECECE 0%, #731426 63%, #1D0933 100%);
+    background: -webkit-linear-gradient(45deg, #CECECE 0%, #731426 63%, #1D0933 100%);
+    background: linear-gradient(45deg, #CECECE 0%, #731426 63%, #1D0933 100%);
+}
+@keyframes anim-circle-second-2 {
+    50%{
+        transform: translateY(-447px) scale(0.4);
+    }
+}
+@keyframes anim-circle-first-2 {
+    50%{
+        transform: translateY(458px) scale(2);
+    }
+}
+@keyframes anim-line-3 {
+    50%{
+        transform: rotateX(75deg)  scale(0.9);
+    }
+    
+}
